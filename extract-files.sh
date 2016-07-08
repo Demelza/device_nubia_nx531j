@@ -3,7 +3,7 @@
 set -e
 
 export DEVICE=nx531j
-export VENDOR=zte
+export VENDOR=nubia
 
 function pull() {
   echo "Extracting /system/$1 ..."

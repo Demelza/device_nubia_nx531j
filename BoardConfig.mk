@@ -16,9 +16,9 @@
 
 BOARD_VENDOR := nubia
 
-DEVICE_PATH := device/zte/nx531j
+DEVICE_PATH := device/nubia/nx531j
 
-TARGET_SPECIFIC_HEADER_PATH := device/zte/nx531j/include
+TARGET_SPECIFIC_HEADER_PATH := device/nubia/nx531j/include
 
 # Architecture
 TARGET_ARCH := arm64
@@ -59,7 +59,7 @@ ENABLE_CPUSETS := true
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := cyanogenmod_oneplus3_defconfig
+TARGET_KERNEL_CONFIG := mokee_oneplus3_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8996
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage
@@ -122,7 +122,10 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_HAL_STATIC_LIBRARIES += libhealthd.msm8996
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
+BOARD_USES_MOKEE_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    hardware/mokee/mkhw \
+    $(DEVICE_PATH)/mkhw
 TARGET_TAP_TO_WAKE_NODE := "/data/tp/easy_wakeup_gesture"
 
 # CNE and DPM
@@ -203,6 +206,13 @@ TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
+# TWRP
+RECOVERY_VARIANT := twrp
+RECOVERY_SDCARD_ON_DATA := true
+TW_THEME := portrait_hdpi
+TW_EXTRA_LANGUAGES := true
+TW_DEFAULT_LANGUAGE := zh_CN
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
@@ -220,4 +230,4 @@ WIFI_DRIVER_MODULE_NAME := "wlan"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/zte/nx531j/BoardConfigVendor.mk
+-include vendor/nubia/nx531j/BoardConfigVendor.mk

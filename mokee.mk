@@ -18,16 +18,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/verity.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/zte/nx531j/device_nx531j.mk)
+$(call inherit-product, device/nubia/nx531j/device_nx531j.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common MoKee stuff.
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_nx531j
+PRODUCT_NAME := mk_nx531j
 PRODUCT_DEVICE := nx531j
 PRODUCT_MANUFACTURER := nubia
 PRODUCT_BRAND := nubia
@@ -39,4 +39,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=nubia/NX531J/NX531J:6.0.1/MMB29M/nubia07271842:user/release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cm.maintainer=XiNGRZ
+    ro.mk.maintainer=XiNGRZ

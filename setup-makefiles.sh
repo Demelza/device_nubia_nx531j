@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEVICE=nx531j
-VENDOR=zte
+VENDOR=nubia
 
 
 PROPRIETARY_FILES=proprietary-files.txt

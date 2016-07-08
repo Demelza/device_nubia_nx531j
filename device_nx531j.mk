@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/zte/nx531j/nx531j-vendor.mk)
+$(call inherit-product-if-exists, vendor/nubia/nx531j/nx531j-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -340,6 +340,10 @@ PRODUCT_PACKAGES += \
 # Touch panel
 PRODUCT_PACKAGES += \
     tp_node.sh
+
+# TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # WiFi
 PRODUCT_PACKAGES += \
