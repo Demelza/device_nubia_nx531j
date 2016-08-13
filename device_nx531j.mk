@@ -337,10 +337,6 @@ PRODUCT_PACKAGES += \
     libthermalclient \
     libthermalioctl
 
-# Touch panel
-PRODUCT_PACKAGES += \
-    tp_node.sh
-
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
