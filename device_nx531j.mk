@@ -329,6 +329,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# Wechat Fingerprint Payment
+PRODUCT_PACKAGES += \
+    soter
+
+PRODUCT_BOOT_JARS += \
+    soter
+
 # WiFi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
