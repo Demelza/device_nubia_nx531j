@@ -26,12 +26,16 @@ $(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
 # Inherit some common MoKee stuff.
 $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
-# Device identifier. This must come after all inclusions
 PRODUCT_NAME := mk_nx531j
 PRODUCT_DEVICE := nx531j
 PRODUCT_MANUFACTURER := nubia
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := NX531J
+
+PRODUCT_GMS_CLIENTID_BASE := android-zte
+
+TARGET_VENDOR_PRODUCT_NAME := NX531J
+TARGET_VENDOR_DEVICE_NAME := NX531J
 
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX531J PRODUCT_NAME=NX531J
 
@@ -40,3 +44,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mk.maintainer=XiNGRZ
+
+TARGET_VENDOR := nubia
