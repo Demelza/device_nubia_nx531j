@@ -1,5 +1,13 @@
 [
   {
+    "repository": "android_kernel_nubia_msm8996",
+    "target_path": "kernel/nubia/msm8996"
+  },
+  {
+    "repository": "android_vendor_nubia_nx531j",
+    "target_path": "vendor/nubia/nx531j"
+  },
+  {
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common"
   },
