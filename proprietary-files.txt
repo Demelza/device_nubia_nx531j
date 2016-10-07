@@ -642,17 +642,8 @@ framework/embmslibrary.jar
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
 framework/QtiTelephonyServicelibrary.jar
-lib/libreference-ril.so
--lib/libril.so
-lib/librilutils.so
-lib64/libreference-ril.so
--lib64/libril.so
-lib64/librilutils.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/qti
-vendor/lib/libril-qc-qmi-1.so
-vendor/lib/libril-qc-radioconfig.so
-vendor/lib/libril-qcril-hook-oem.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
