@@ -328,12 +328,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstlport
 
-# Thermal
-PRODUCT_PACKAGES += \
-    thermal-engine \
-    libthermalclient \
-    libthermalioctl
-
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
