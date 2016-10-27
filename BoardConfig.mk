@@ -221,6 +221,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := zh_CN
+TW_INPUT_BLACKLIST := "hbtp_vm"
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
