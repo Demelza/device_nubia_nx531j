@@ -1,0 +1,13 @@
+on init
+    # Enable tap-to-wake gesture
+    write /sys/bus/i2c/devices/12-0020/wake_gesture 1
+
+    # Turn on button leds
+    write /sys/class/leds/nubia_led/outn 8
+    write /sys/class/leds/nubia_led/grade_parameter 3
+    write /sys/class/leds/nubia_led/blink_mode 6
+
+    # Turn on Nubia red led
+    write /sys/class/leds/nubia_led/outn 16
+    write /sys/class/leds/nubia_led/grade_parameter 8
+    write /sys/class/leds/nubia_led/blink_mode 6
