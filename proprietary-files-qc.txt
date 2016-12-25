@@ -36,7 +36,16 @@ bin/energy-awareness|fd652a3805723dced5a53ac757ba59a9db2e973f
 bin/msm_irqbalance|b68e174f911823eecabe0c5cbc993cdf0f18968f
 
 # Radio
-framework/qti-telephony-common.jar|eabfa165b2c4d1d6c7baae424bf13a0e8575e8f6
+-app/datastatusnotification/datastatusnotification.apk|091f391c3285f90a6026135e0e4f9326efe5548e
+-app/embms/embms.apk|17f5325f7c02508b3f4f122230ea3f88d73f2b97
+-app/fastdormancy/fastdormancy.apk|ffaa753ef185957f12c7f5b9a645342aad163ded
+-app/QtiTelephonyService/QtiTelephonyService.apk|ec234e8568abed82a93e4109b3a464fcf3d48660
+-app/shutdownlistener/shutdownlistener.apk|3f03369b61d8ef8602080d803ac8e879e5be8128
+framework/embmslibrary.jar|a06799495515305de3e5d432ec62a1f692200c99
+-framework/qcrilhook.jar|5a3a0f90f42aa6e2f38e0c208decf5305b47f625
+framework/qti-telephony-common.jar|02fbc79f309af1c9ccfb1401cbd898138faf0848
+framework/QtiTelephonyServicelibrary.jar|fc47f4b4bffa66023e76407aca341683fb5d58ee
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|becd278fddc278c42055b97748bbbe39c495b39a
 
 # Radio - IMS
 -vendor/app/ims/ims.apk|138de3a169d8c4703d9e5645abeb19e427b04909
