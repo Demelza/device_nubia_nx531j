@@ -75,7 +75,7 @@
 
         <receiver android:name=".Startup" >
             <intent-filter>
-                <action android:name="mokee.intent.action.INITIALIZE_CM_HARDWARE" />
+                <action android:name="mokee.intent.action.INITIALIZE_MK_HARDWARE" />
             </intent-filter>
         </receiver>
     </application>
