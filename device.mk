@@ -320,8 +320,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     qcnvitems \
-    qcrilhook \
-    telephony-static-config
+    qcrilhook
 
 # Sensors
 PRODUCT_PACKAGES += \
