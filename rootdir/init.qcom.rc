@@ -104,6 +104,10 @@ on boot
     chmod 2770 /dev/socket/qmux_gps
 
     mkdir /persist/drm 0770 system system
+    mkdir /persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /persist/misc 0770 system system
+    mkdir /persist/alarm 0770 system system
+    mkdir /persist/time 0770 system system
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
@@ -200,6 +204,10 @@ on post-fs-data
     # Create port-bridge log dir
     mkdir /data/misc/port_bridge 0770 radio radio
     chmod 0770 /data/misc/port_bridge
+
+    #create netmgr log dir
+    mkdir /data/misc/netmgr 0770 radio radio
+    chmod 0770 /data/misc/netmgr
 
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
@@ -350,6 +358,7 @@ service iop /system/bin/iop
     user root
     group root
     disabled
+    socket iop seqpacket 0666 root system
 
 service qcomsysd /system/bin/qcom-system-daemon
     class main
@@ -441,7 +450,9 @@ on property:bluetooth.startbtsnoop=false
 
 on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
+    start config_bt_addr
     start config_bluetooth
+    start wcnss-service
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
@@ -455,6 +466,7 @@ service cnd /system/bin/cnd
 service dpmd /system/bin/dpmd
     class late_start
     socket dpmd stream 660 root system
+    group system readproc
     writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
@@ -472,7 +484,7 @@ service rfs_access /system/bin/rfs_access
    group system net_raw
 
 service tftp_server /system/bin/tftp_server
-   class main
+   class core
    user root
 
 on property:wc_transport.start_hci=true
@@ -484,7 +496,7 @@ on property:wc_transport.start_hci=false
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth qcom_diag
+    group bluetooth qcom_diag system wakelock
     disabled
 
 on property:wc_transport.start_root=true
@@ -498,6 +510,12 @@ service hci_filter_root /system/bin/wcnss_filter
     user bluetooth
     group bluetooth qcom_diag system
     disabled
+
+service config_bt_addr /system/bin/btnvtool -O
+    class core
+    user bluetooth
+    group bluetooth radio
+    oneshot
 
 service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
     class core
@@ -747,7 +765,7 @@ service cnss-daemon /system/bin/cnss-daemon -n -l
 service loc_launcher /system/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet net_raw qcom_diag net_admin wifi
+    group gps inet qcom_diag wifi
 
 on property:crypto.driver.load=1
      insmod /system/lib/modules/qce.ko
