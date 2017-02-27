@@ -53,8 +53,5 @@ echo '$(call inherit-product, vendor/qcom/binaries/msm8996/audio/audio-vendor.mk
 echo '$(call inherit-product, vendor/qcom/binaries/msm8996/graphics/graphics-vendor.mk)' >> "$PRODUCTMK"
 echo '' >> "$PRODUCTMK"
 
-# Append the calls to firmware images
-append_firmware_calls_to_makefiles
-
 # We are done!
 write_footers
