@@ -126,8 +126,6 @@ PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
-    imx179_chromatix.xml \
-    imx298_ois_chromatix.xml \
     msm8996_camera.xml
 
 # Ramdisk
