@@ -24,10 +24,6 @@
     "target_path": "vendor/nxp-nfc/opensource/Nfc"
   },
   {
-    "repository": "android_vendor_qcom_binaries",
-    "target_path": "vendor/qcom/binaries"
-  },
-  {
     "repository": "android_external_stlport",
     "target_path": "external/stlport"
   },
