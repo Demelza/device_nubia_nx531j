@@ -124,8 +124,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 # CM Hardware
 BOARD_USES_MOKEE_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
-    hardware/mokee/mkhw \
-    $(DEVICE_PATH)/mkhw
+    hardware/mokee/mkhw
 TARGET_TAP_TO_WAKE_NODE := "/data/tp/easy_wakeup_gesture"
 
 # CNE and DPM
