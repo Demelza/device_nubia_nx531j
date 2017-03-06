@@ -507,6 +507,7 @@ etc/firmware/nubia_tp_jdi_fw.img
 bin/cnss-daemon
 bin/cnss_diag
 bin/fstman
+lib/modules/qca_cld/qca_cld_wlan.ko
 
 # OMX
 lib/libstagefright_soft_flacdec.so

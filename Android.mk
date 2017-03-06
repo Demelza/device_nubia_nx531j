@@ -80,4 +80,13 @@ $(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK) $(WCNSS_MAC_SYMLINK)
 
+QCACLD_SYMLINK := $(TARGET_OUT)/lib/modules/qca_cld/qca_cld_wlan.ko
+$(QCACLD_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "QCACLD link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/lib/modules/wlan.ko $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(QCACLD_SYMLINK)
+
 endif
