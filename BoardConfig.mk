@@ -23,13 +23,15 @@
 # Boldly go.
 USE_CLANG_PLATFORM_BUILD := true
 
-TARGET_OTA_ASSERT_DEVICE := nx531j,NX531J
-
 DEVICE_PATH := device/nubia/nx531j
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 BOARD_VENDOR := nubia
+
+# Assertions
+TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
+TARGET_OTA_ASSERT_DEVICE := nx531j,NX531J
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
