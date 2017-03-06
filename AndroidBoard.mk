@@ -1,11 +1,9 @@
 LOCAL_PATH := $(call my-dir)
 
-KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-TARGET_PREBUILT_KERNEL_INCLUDE := $(KERNEL_OUT)
-
+TARGET_PREBUILT_KERNEL_INCLUDE := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 $(TARGET_PREBUILT_KERNEL_INCLUDE):
-	mkdir -p $(KERNEL_OUT)
-	cp -rf $(LOCAL_PATH)/kernel/include $(KERNEL_OUT)/
+	mkdir -p $@
+	cp -rf device/nubia/nx531j/kernel/include/* $@
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP) $(TARGET_PREBUILT_KERNEL_INCLUDE)
 	$(transform-prebuilt-to-target)
