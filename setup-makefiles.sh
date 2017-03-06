@@ -48,10 +48,10 @@ write_makefiles "$MY_DIR"/proprietary-files-qc.txt
 # Qualcomm performance blobs
 write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt
 
-echo '' >> "$PRODUCTMK"
-echo '$(call inherit-product, vendor/qcom/binaries/msm8996/audio/audio-vendor.mk)' >> "$PRODUCTMK"
-echo '$(call inherit-product, vendor/qcom/binaries/msm8996/graphics/graphics-vendor.mk)' >> "$PRODUCTMK"
-echo '' >> "$PRODUCTMK"
+cat << EOF >> "$ANDROIDMK"
+\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
+\$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib64/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
+EOF
 
 # We are done!
 write_footers
