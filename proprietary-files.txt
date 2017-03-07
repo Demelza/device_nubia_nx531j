@@ -83,7 +83,6 @@ lib/libNubiaImageAlgorithm.so
 lib/libNubiaxmptoolkit.so
 lib/libalRnB.so
 lib/libalSDE2.so
-lib/libalsautils.so
 lib/libarcsoft_night_shot.so
 lib/libmm-qcamera.so
 lib/libmmcamera_interface.so
@@ -103,7 +102,6 @@ lib64/libNubiaImageAlgorithm.so
 lib64/libNubiaxmptoolkit.so
 lib64/libalRnB.so
 lib64/libalSDE2.so
-lib64/libalsautils.so
 lib64/libavcodec.so
 lib64/libavfilter.so
 lib64/libavformat.so
