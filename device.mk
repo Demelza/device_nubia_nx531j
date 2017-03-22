@@ -118,7 +118,7 @@ PRODUCT_COPY_FILES += \
 
 # Browser
 PRODUCT_PACKAGES += \
-    Gello
+    
 
 # Camera
 PRODUCT_PACKAGES += \
