@@ -39,7 +39,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=nubia/NX531J/NX531J:7.1.1/NMF26F/nubia02231811:user/release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.maintainer=XiNGRZ
+    ro.rr.maintainer=ZhangXueZe
 
 TARGET_VENDOR := nubia
 
